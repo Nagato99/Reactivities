@@ -2,12 +2,12 @@ import React from "react";
 import { Button, Item, Label, Segment } from "semantic-ui-react";
 import { Activity } from "../../models/activity";
 
-interface Props{
+interface Props {
     activities: Activity[];
 }
 
-export default function ActivityList({activities}: Props) {
-    return(
+export default function ActivityList({ activities }: Props) {
+    return (
         <Segment>
             <Item.Group divided>
                 {activities.map(activity => (
