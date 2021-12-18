@@ -8,7 +8,7 @@ export default function NavBar()
             <Container>
                 <Menu.Item header>
                     <img src="/assets/logo.png" alt="logo" style={{marginRight: '10px'}}/>
-                    REactivities
+                    Reactivities
                 </Menu.Item>
                 <Menu.Item name='Activities' />
                 <Menu.Item>
