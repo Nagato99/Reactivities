@@ -6,6 +6,7 @@ import { observer } from 'mobx-react-lite';
 import { Route } from 'react-router-dom';
 import HomePage from './home/HomePage';
 import ActivityForm from './activities/form/ActivityForm';
+import ActivityDetails from './activities/Details/ActivityDetails';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <NavBar />
       <Container style={{ marginTop: '7em' }}>
         <Route exact path='/' component={HomePage} />
-        <Route path='/activities' component={ActivityDashboard} />
+        <Route exact path='/activities' component={ActivityDashboard} />
+        <Route path='/activities/:id' component={ActivityDetails} />
         <Route path='/createActivity' component={ActivityForm} />
       </Container>
     </>
