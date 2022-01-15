@@ -3,15 +3,12 @@ import React, { useEffect } from "react";
 import { Grid } from "semantic-ui-react";
 import LoadingComponent from "../../LoadingComponents";
 import { useStore } from "../../stores/store";
-import ActivityDetails from "../Details/ActivityDetails";
-import ActivityForm from "../form/ActivityForm";
 import ActivityList from "./ActivityList";
 
 
 export default observer( function ActivityDashboard() {
 
     const { activityStore } = useStore();
-    const { selectedActivity, editMode } = activityStore;
 
   useEffect(() => {
     activityStore.loadActivities();
@@ -26,10 +23,7 @@ export default observer( function ActivityDashboard() {
                 <ActivityList />
             </Grid.Column>
             <Grid.Column width='6'>
-                {selectedActivity && !editMode &&
-                    <ActivityDetails />}
-                {editMode &&
-                    <ActivityForm />}
+                <h2>Activity filters</h2>
             </Grid.Column>
         </Grid>
     )
